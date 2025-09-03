@@ -139,6 +139,25 @@ Let me know if you want this script added.
 
 ---
 
+```
+[shopeybd.com]
+listen = 127.0.0.1:19001
+user = shopeybd
+group = shopeybd
+listen.allowed_clients = 127.0.0.1
+pm = ondemand
+pm.max_children = 250
+pm.process_idle_timeout = 10s
+pm.max_requests = 100
+listen.backlog = 65535
+pm.status_path = /status
+request_terminate_timeout = 7200s
+rlimit_files = 131072
+rlimit_core = unlimited
+catch_workers_output = yes
+aigula check and review kore bolo aigula ki thik ache
+```
+
 ## 🔒 Credits
 
 Maintained by [Asif](https://shopeybd.com) 💻  
