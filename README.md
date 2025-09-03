@@ -35,14 +35,11 @@ php-fpm: master process (...)
 If you're only using PHP 8.4, disable others to free RAM:
 
 ```bash
-systemctl stop php8.1-fpm
-systemctl disable php8.1-fpm
-
-systemctl stop php8.2-fpm
-systemctl disable php8.2-fpm
-
-systemctl stop php7.4-fpm
-systemctl disable php7.4-fpm
+# All in one command
+for version in 7.1 7.2 7.3 7.4 8.0 8.1 8.2 8.3; do
+    systemctl stop php${version}-fpm
+    systemctl disable php${version}-fpm
+done
 ```
 
 > 🔍 List all PHP-FPM services:
